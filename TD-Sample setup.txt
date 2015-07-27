@@ -10,7 +10,8 @@ Setup:
 2. The repository consists of 3 folders apart from the Readme and Setup files that are in the root folder.
 3. The PythonScripts folder contains Python programs that retrieve data from Treasure Data using the td-client library.
 4. The Scripts folder contain 2 shell scripts that need to be run to setup the environment before executing any of the programs.
-5. The Queries program contains the queries, outputs and results for 10 different combinations of arguments. 
+5. Both the scripts need to have execute permission. This can be accomplished by executing 'chmod +x <script name>'
+6. The Queries program contains the queries, outputs and results for 10 different combinations of arguments. 
 
 Running the Programs:
 1. Run the setTDAPIKEY.sh file. This file sets the environment variable 'TD_API_KEY' with the appropriate value of the key to access the TreasureData database.
