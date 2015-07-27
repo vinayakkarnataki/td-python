@@ -1,0 +1,1 @@
+query -d membership -t members -c 'ID, FirstName, LastName, Email, Points, Status, Time' -m 956443298 -l 50

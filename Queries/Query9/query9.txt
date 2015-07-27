@@ -1,0 +1,1 @@
+query -d membership -t members -c 'FirstName, Email, Phone, Status' -f csv -l 25

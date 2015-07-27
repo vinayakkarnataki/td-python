@@ -1,0 +1,31 @@
+This file presents the instructions for running the Python program to run a command line interface to retrive data, using Treasure Data Python Library, from Treasure Data. The data will be based on the query parameters provided at the command line. 
+
+Pre-requisites:
+1. The system where will program will be run needs to have Python 2.7.x installed and the path set to run Python script from any folder. 
+2. The Treasure Data Python Client Library will need to be installed as well. The library can be downloaded from GitHub (https://github.com/treasure-data/td-client-python) or by using the 'pip install td-client' command.
+
+
+Setup:
+1. Download the TD Python Sample repository from Github URL: https://github.com/vinayakkarnataki/td-python-sample.git
+2. The repository consists of 3 folders apart from the Readme and Setup files that are in the root folder.
+3. The PythonScripts folder contains Python programs that retrieve data from Treasure Data using the td-client library.
+4. The Scripts folder contain 2 shell scripts that need to be run to setup the environment before executing any of the programs.
+5. The Queries program contains the queries, outputs and results for 10 different combinations of arguments. 
+
+Running the Programs:
+1. Run the setTDAPIKEY.sh file. This file sets the environment variable 'TD_API_KEY' with the appropriate value of the key to access the TreasureData database.
+2. Run the alias.sh to setup an alias for the python command. Running the script will result in an alias 'query' being created in lieu of 'python td_sample.py'.
+3. Copy both the python files to a folder of your choice.
+4. Run the td_sample.py from the command prompt using the alias 'query'. An example command could look like this: query -d <db_name> -t <table_name> -c <column list> -f <file type> -e <engine> -m <minimum time> -M <maximum time> -l <row limit>
+5. The first 2 parameters are required while the rest are optional. 
+6. -d parameter takes the database name. For the sake of this exercise the database name will be 'membership'.
+7. -t parameter takes the table name. For the sake of this exercise the table name will be 'members'.
+8. -c parameter takes the list of columns separated by comma. For e.g -c 'col1,col2,col3'
+9. -f parameter takes the file type for results. File type can either be csv or tsv. tsv is the default.
+10. -e parameter defines the engine to be used. 'Hive' or 'Presto' are the 2 options with presto being the default.
+11. -m parameter defines the minimum value of the time column for the search. The default is 0
+12. -M parameter defines the maximum value of the time column for the search. The default is infinite. 
+13. -l parameter defines the maximum number of records that can be retrieved for a query. The default is 100 rows.
+14. The results are recorded in the 'results_query.csv' or 'results_query.txt' depending upon the choice of file format.
+15. The stdout is directed to stdout_query.txt file. 
+

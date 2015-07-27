@@ -1,0 +1,11 @@
+456321	Jack	Finch	jfinch@gmail.com	211134	Silver	957264586	
+787865	Maggie	Smith	ms5789@yahoo.com	116688	Bronze	1057214398	
+779863	Robert	Wischmann	wishybob@gmail.com	100688	Bronze	1157214768	
+343434	Terry	Jackson	terryj@caper.com	253134	Silver	997264792	
+235576	Rick	Poteat	Dcurator@live.com	183688	Bronze	1117214768	
+337895	Peter	Connor	peter@connor.com	335134	Gold	1157264772	
+987654	Claire	Smith	clairerules@live.com	126553	Bronze	1057216542	
+534729	Johan	Clausen	joclaus@gmail.com	613446	Diamond	999254411	
+656578	Vijay	Patki	dreamcatcher@gmail.com	225688	Bronze	1127214773	
+217889	William	Coleman	bolts4ever@gmail.com	258734	Silver	997264386	
+764990	Jasper	Patin	gumbolover@live.com	199688	Gold	1117453769	

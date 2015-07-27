@@ -1,0 +1,1 @@
+query -d membership -t members -c 'ID, FirstName, LastName, Points, Status' -f csv
