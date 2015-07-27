@@ -6,10 +6,11 @@ import tdclient
 import sys, os, argparse
 import Functions
 
-#requests.packages.urllib3.disable_warnings()
 if __name__ == '__main__':
     apikey = os.getenv("TD_API_KEY")
-    sys.stdout = open('stdout_query.txt', 'w')
+
+    # the stdout can be directed to a file by uncommenting the next line
+    #sys.stdout = open('stdout_query.txt', 'w')
 
     if (len(sys.argv) < 5):
         print("Usage: %s -d database -t table" % sys.argv[0])
@@ -38,6 +39,8 @@ if __name__ == '__main__':
              limit = getattr(args, arg)
         elif arg == 'f':
              file = getattr(args, arg)
+        elif arg == 'e':
+             engine = getattr(args, arg)
         else:
             print("Undefined argument passed: %s" % getattr(args, arg))
             sys.exit(1)
@@ -48,6 +51,7 @@ if __name__ == '__main__':
     Functions.validateTime(mintime,maxtime)
     Functions.validateInt(limit)
     Functions.validateFile(file)
+    Functions.validateEngine(engine)
 
 
     try:
@@ -64,7 +68,9 @@ if __name__ == '__main__':
     with tdclient.Client(apikey) as client:
         try:
             data = client.query(dbase, query)
+            #wait of job to complete
             data.wait()
+            # Check for empty resultset
             if data.result_size > 20:
                 for line in data.result():
                     if file == 'csv':

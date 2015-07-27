@@ -2,13 +2,14 @@ __author__ = 'vinayakkarnataki'
 import sys, argparse
 
 def createParser(parsestr):
-    parsestr.add_argument('-d', required=True, help='foo help')
-    parsestr.add_argument('-t', required=True, help='bar help')
-    parsestr.add_argument('-c', default='*', help='bar help')
-    parsestr.add_argument('-l', default=100, help='bar help')
-    parsestr.add_argument('-m', default="NULL", help='bar help')
-    parsestr.add_argument('-M', default="NULL", help='bar help')
-    parsestr.add_argument('-f', default="tsv", help='bar help')
+    parsestr.add_argument('-d', required=True, help='d help')
+    parsestr.add_argument('-t', required=True, help='t help')
+    parsestr.add_argument('-c', default='*', help='c help')
+    parsestr.add_argument('-l', default=100, help='l help')
+    parsestr.add_argument('-m', default="NULL", help='m help')
+    parsestr.add_argument('-M', default="NULL", help='M help')
+    parsestr.add_argument('-f', default="tsv", help='f help')
+    parsestr.add_argument('-e', default="presto", help='e help')
     return parsestr
 
 
@@ -64,6 +65,11 @@ def validateTime(min, max):
 def validateFile(fformat):
     if fformat not in "csv, tsv":
         print("File format should be csv or tsv")
+        sys.exit(1)
+
+def validateEngine(enginename):
+    if enginename not in "presto, hive":
+        print("Engine should be presto or hive")
         sys.exit(1)
 
 def writeTSV(writer, alist):
