@@ -14,7 +14,7 @@ Setup:
 6. The Queries program contains the queries, outputs and results for 10 different combinations of arguments. 
 
 Running the Programs:
-1. Run the setTDAPIKEY.sh file. This file sets the environment variable 'TD_API_KEY' with the appropriate value of the key to access the TreasureData database.
+1. Run the setTDAPIKEY.sh file, using the command 'source setTDAPIKEY.sh'. This file sets the environment variable 'TD_API_KEY' with the appropriate value of the key to access the TreasureData database.
 2. Run the alias.sh to setup an alias for the python command. Running the script will result in an alias 'query' being created in lieu of 'python td_sample.py'.
 3. Copy both the python files to a folder of your choice.
 4. Run the td_sample.py from the command prompt using the alias 'query'. An example command could look like this: query -d <db_name> -t <table_name> -c <column list> -f <file type> -e <engine> -m <minimum time> -M <maximum time> -l <row limit>
